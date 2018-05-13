@@ -7,9 +7,9 @@
 body {
     width: 100%;
     height: 100%;
-    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #fff;
-    background-color: {{ site.color.primary-dark }};
+    font-family: 'Lato', sans-serif;
+    color: #000;
+    background-color: #fff;
 }
 
 html {
@@ -24,10 +24,12 @@ h4,
 h5,
 h6 {
     margin: 0 0 35px;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: 'Lato', sans-serif;
     letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 2em;
 }
 
 p {
@@ -39,7 +41,7 @@ p {
 @media(min-width:767px) {
     p {
         margin: 0 0 35px;
-        font-size: 20px;
+        font-size: 26px;
         line-height: 1.6;
     }
 }
@@ -53,20 +55,28 @@ a {
 
 a:hover,
 a:focus {
-    text-decoration: none;
+    text-decoration: underline !important;
     color: #11505d;
+    background-color: transparent !important;
 }
 
 .light {
     font-weight: 400;
 }
 
+.logo-top {
+    position: fixed;
+}
+
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: {{ site.color.primary-dark }};
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #fff;
 }
 
 .navbar-custom .navbar-brand {
@@ -80,7 +90,12 @@ a:focus {
 .navbar-custom .navbar-brand .navbar-toggle {
     padding: 4px 6px;
     font-size: 16px;
-    color: #fff;
+}
+
+.navbar-toggle {
+    color: #000;
+    font-size: 60px;
+    padding: 10px;
 }
 
 .navbar-custom .navbar-brand .navbar-toggle:focus,
@@ -89,25 +104,36 @@ a:focus {
 }
 
 .navbar-custom a {
-    color: #fff;
+    color: #000;
 }
 
-.navbar-custom .nav li.active {
-    outline: none;
-    background-color: rgba(255,255,255,.3);
+@media(min-width:767px) {
+    .navbar-custom .nav li.active {
+        outline: #000 solid 4px;
+        box-shadow: -8px 8px 0 0px #fff, -7px 7px 0 4.5px #000;
+        background: #fff;
+    }
 }
 
 .navbar-custom .nav li a {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
+    padding: 10px;
+}
+
+.navbar-custom .nav li {
+    margin: 10px;
+}
+
+.navbar-nav {
+    padding-top: 4rem;
 }
 
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li a.active {
     outline: 0;
-    background-color: rgba(255,255,255,.3);
 }
 
 @media(min-width:767px) {
@@ -123,7 +149,6 @@ a:focus {
 
     .top-nav-collapse {
         padding: 0;
-        background-color: {{ site.color.primary-dark }};
     }
 
     .navbar-custom.top-nav-collapse {
@@ -137,13 +162,8 @@ a:focus {
     height: auto;
     padding: 100px 0;
     text-align: center;
-    color: #fff;
-    background: url(/img/intro-bg.jpg) no-repeat bottom center scroll;
-    background-color: {{ site.color.primary-dark }};
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    color: #000;
+    background-color: #fff;
 }
 
 .intro .intro-body {
@@ -182,18 +202,13 @@ a:focus {
     border: 2px solid #fff;
     border-radius: 35px;
     font-size: 40px;
-    color: #fff;
-    background: 0 0;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+    color: #FF0090;
 }
 
 .btn-circle:hover,
 .btn-circle:focus {
     outline: 0;
     color: #fff;
-    background: rgba(255,255,255,.1);
 }
 
 .btn-circle i.animated {
@@ -214,7 +229,7 @@ a:focus {
     -moz-animation-timing-function: linear;
 }
 
-@-webkit-keyframes pulse {    
+@-webkit-keyframes pulse {
     0 {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -231,7 +246,7 @@ a:focus {
     }
 }
 
-@-moz-keyframes pulse {    
+@-moz-keyframes pulse {
     0 {
         -moz-transform: scale(1);
         transform: scale(1);
@@ -249,19 +264,13 @@ a:focus {
 }
 
 .content-section {
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 .download-section {
     width: 100%;
     padding: 50px 0;
-    color: #fff;
-    background: url(/img/downloads-bg.jpg) no-repeat center center scroll;
-    background-color: {{ site.color.primary-dark }};
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    color: #000;
 }
 
 #map {
@@ -275,10 +284,6 @@ a:focus {
         padding-top: 200px;
     }
 
-    .download-section {
-        padding: 100px 0;
-    }
-
     #map {
         height: 400px;
         margin-top: 250px;
@@ -287,7 +292,7 @@ a:focus {
 
 .btn {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -364,4 +369,46 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+.intro-span {
+    font-family: 'Sansita';
+}
+
+.header-image {
+    padding-top: 5rem;
+}
+
+@media (max-width: 425px) {
+    .header-image {
+        width: 75%;
+        padding-top: 20vh;
+    }
+}
+
+.navbar-header {
+    height: 150px;
+}
+
+.pink {
+    color: #FF0090;
+    text-align: left;
+    font-size: 40px;
+}
+
+.yellow-bg {
+    background: linear-gradient(
+        to right, 
+        #FFF00C 0%, 
+        #FFF00C 50%, 
+        #fff 50%, 
+        #fff 100%
+    );
+    transition: 0.4s all;
+}
+
+.blue {
+    color: #0CBAED;
+    font-size: 40px;
+    text-align: left;
 }
