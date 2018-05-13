@@ -44,7 +44,7 @@ if(!isMobile) {
         if ($(this).scrollTop() > $(document).height()*0.01) {
             $('html').addClass('yellow-bg')
         }
-        if ($(this).scrollTop() < $(document).height()*0.09 || $(this).scrollTop() > $(document).height()*0.32) {
+        if ($(this).scrollTop() < $(document).height()*0.09 || $(this).scrollTop() > $(document).height()*0.3) {
             $('html').removeClass('yellow-bg')
         }
         });

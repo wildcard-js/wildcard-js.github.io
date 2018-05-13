@@ -17,7 +17,9 @@ social:
   - title: twitter
     url: https://twitter.com/wildcard_js
   - title: github
-    url: https://github.com/IronSummitMedia/startbootstrap
+    url: https://github.com/wildcard-js
+  - title: slack
+    url: https://wildcardjs-slack.herokuapp.com/
 
 # Build settings
 markdown: kramdown

@@ -41,7 +41,7 @@ p {
 @media(min-width:767px) {
     p {
         margin: 0 0 35px;
-        font-size: 26px;
+        font-size: 22px;
         line-height: 1.6;
     }
 }
@@ -70,7 +70,6 @@ a:focus {
 
 .navbar-custom {
     margin-bottom: 0;
-    border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
     font-family: 'Lato', sans-serif;
     font-style: italic;
@@ -149,10 +148,6 @@ a:focus {
 
     .top-nav-collapse {
         padding: 0;
-    }
-
-    .navbar-custom.top-nav-collapse {
-        border-bottom: 1px solid rgba(255,255,255,.3);
     }
 }
 
@@ -299,6 +294,11 @@ a:focus {
     transition: all .3s ease-in-out;
 }
 
+
+.btn-default {
+    color: #FF0090 !important;
+}
+
 .btn-default {
     border: 1px solid {{ site.color.links }};
     color: {{ site.color.links }};
@@ -315,15 +315,19 @@ a:focus {
 
 ul.banner-social-buttons {
     margin-top: 0;
+    color: #FF0090;
 }
 
 ul.banner-social-buttons li {
     margin-bottom: 15px;
+    color: #FF0090;
 }
 
 @media(max-width:1199px) {
     ul.banner-social-buttons {
         margin-top: 15px;
+        color: #FF0090;
+        
     }
 }
 
@@ -411,4 +415,13 @@ body {
     color: #0CBAED;
     font-size: 40px;
     text-align: left;
+}
+
+#team {
+    background: #fff;
+}
+
+
+ul {
+    font-size: 22px;
 }
