@@ -17,6 +17,10 @@ html {
     height: 100%;
 }
 
+.container {
+    margin: 0;
+}
+
 h1,
 h2,
 h3,
@@ -409,6 +413,12 @@ body {
         #fff 100%
     );
     transition: 0.4s all;
+}
+
+.yellow-bg::before {
+    background: #FFF00C;
+    width: 20px;
+    z-index: -1; 
 }
 
 .blue {

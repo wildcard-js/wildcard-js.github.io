@@ -39,15 +39,20 @@ $("a").mouseup(function(){
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 
 if(!isMobile) {
-    $(function() {
-        $(window).scroll(function () {
-        if ($(this).scrollTop() > $(document).height()*0.01) {
-            $('html').addClass('yellow-bg')
-        }
-        if ($(this).scrollTop() < $(document).height()*0.09 || $(this).scrollTop() > $(document).height()*0.3) {
-            $('html').removeClass('yellow-bg')
-        }
-        });
+    $(window).scroll(function() {
+        let hT = $('#about').offset().top,
+            hH = $('#about').outerHeight(),
+            wH = $(window).height(),
+            wS = $(this).scrollTop();
+
+        let nexthT = $('#about').offset().top,
+            nexthH = $('#about').outerHeight();
+
+        if (wS > (hT+hH-wH)) {
+            $('#about').addClass('yellow-bg');
+        } else if (wS > (nexthT+nexthH-wH)) {
+            $('#about').removeClass('yellow-bg');
+        };
     });
 
     $(function() {
